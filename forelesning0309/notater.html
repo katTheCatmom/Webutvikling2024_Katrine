@@ -1,0 +1,62 @@
+<!---
+HTML-skjemaer: form, input, label, textarea
+
+Grunnleggende element, som gjør det meste av det vi gjør av handel, kommenttering, registrering og kontakt på nett
+    - interaksjon
+    - dynamikk
+Besetår av ulike inndatafelt
+    - gjør det mulig å samle ulik data
+    - ulike attributter for å registrere hva slags type data det er snakk om
+Dataen blir sendt til en server for behandling og lagring
+Sikkerhet og kontroll av data
+    - Hva er det som blir fylt inn
+        - Gir du muligheten til å fylle inn hva som helst
+            - Noen dataskyndige kan da skrive inn kode for å fucke med siden din
+            - viktig å begrense skjemaene, feks type tegn (kun bokstaver, antall tegn)
+Vi skal kun jobbe med statiske nettsider
+    - skjemaene vil ikke ha noe funksjonalitet
+    - kun for utseende og design
+    - kun bruk av riktig attributter, ikke noe database-jobbing
+tagger:
+<form>
+        - skjema-taggen
+        -lager skjema for data innsamling
+        - omslutter alle de andre taggene for datainnsamlingen
+        - definerer også slags metode
+            - hva slags data som blir sendt (method)
+        - også denne taggen vi forteller hvor skjemaet blir sendt (action)
+
+<input>
+    - definerer hva slags input vi forventer
+    - også hva slags data vi forventer
+    - For de aller fleste datatypene vi vil ha (navn, passord, mailadresse, adresse)
+    - type-attributtet gir en formattering, feks stjerner når man skriver passord    
+        - password
+        - text (for mindre mengder tekst)
+        - email for mail
+        - pluss masse mer
+    - name-attributtet henger sammen med backend-kommunikasjonen
+        - name=brukernavn -> havner i databasen som er name-relatert. og sortert deretter.
+        - kan bindes til label (et merke)
+        - Gjør at dataen blir lagret på riktig sted
+    - value
+        - kan sette en default verdien dersom ikke noe blir fylt inn
+        - eller hvis ingenting skal stå der
+    -placeholder
+        - for eksempel en eksempeltekst.
+        - ikke en erstatning til label
+    - required
+    - readonly
+    - disabled
+        - blir også hoppet over av opplesnings-verktøy
+    - maxlength
+    - pattern
+    - min og max
+    - step
+<label>
+    - sjekk powerpointen
+<textarea>
+    - har attributter for litt styling
+        - AC annbefaler css, ikke disse. Men de finnes
+
+-->
