@@ -1,0 +1,54 @@
+<!--
+Lister og tabeller
+
+Lister
+- Gruppere relaterte elementer til hverandre
+- riktig listeelement er viktig for konteksten
+    - Viktig for brukeropplevelsen og tilgjengeliheten
+- Unngå tomme listeelementer
+    - Hvert <li>-element skal ha meningsfull informasjon
+- <li> kan aldri ligge utenfor <ol>/<ul>
+
+- <ul> og <ol> kan nestes inni <li>
+    - Nesta lister er lov
+<ul>
+    <li>
+        <ol> -> kan ha en <ol> nested i en <ul>, og motsatt
+
+
+Tabeller
+- Organisere data i rader og kolonner
+- Presentere, feks
+            - Regneark
+            - sammenligninger
+            - Rapporter
+            - Annen strukturert data
+- For å ivareta tilgjengeligheten
+            - Bruk riktige tagger og attributter for semantikken
+- Definert ved <table>-taggen
+- Alt av design gjøres i css.
+    - border, cellpadding, cellspacing, width og align er utgåtte attributter
+- <tr> representer en rad
+    - table row
+    - skal inneholde ulike celler med data
+    - kan være
+        - <th>
+            - Table heading
+            - Representerer overskrift
+        - <td>
+            - Table data
+- Avanserte tabeller
+    - <thead>
+        - gir mer semantisk mening til hele tabellen, ved å gruppere en eller flere rader med overskrifter
+        - table heading
+        - attributtet scope gjør det enklere for å tolke tabellens innhold
+        - plasseres vanligvis rett under <tbale>-taggen, og før <tbody>-taggen
+    -<tbody>
+        - Grupperes hovedinnholdet i en tabell
+        - inneholder de faktiske data-radene i tabellen, og brukes sammen med <thead> for overskrifter
+    - <tfoot>
+        - definerer foten i tabellen
+        - bør plasseres i bunnen etter <tbody> og før </table>
+        - summeringer, totaler, ellen annen informasjon som oppsummerer tabellens data
+
+-->

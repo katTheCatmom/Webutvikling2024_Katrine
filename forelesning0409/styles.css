@@ -1,0 +1,12 @@
+
+td, th {
+    border: 2px solid black;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+
+
+/*Times New Roman er ikke egnet for nett, kun bok. Er forstyrrende på skjerm. Slitsomt for øynene.
+    Bruk Arial, Helvetica, sans-serif*/
