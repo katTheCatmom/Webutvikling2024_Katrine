@@ -132,5 +132,144 @@ Planlegge er å designe
 - Brukertesting gjøres kontinuerlig gjennom prosjektet!
             - trenger ikke være store brukerstester
                 - flere korte, med færre personer, ofte. 
+
+Informasjonsarkitektur
+- hvordan informasjon struktureres, organiseres og presenteres på en nettside eller i en applikasjon for å gjøre det lett å navigere og forstå brukerne
+- språk
+    - ikke norsk, engelsk etc. Begreper og definisjoner: husk målgruppe
+- To hovedfremgangsmåter
+     - top-down
+        - Starter med en overordnet struktur og bryter deretter informasjonen ned i mindre deler. Store bildet > detlajert
+            - brukeren navigerer seg videre innover i de mindre delene.
+        - klassisk nettsidestruktur
+        Start med å definere de overordna delene
+            - hovedkategorier og sider
+        Lag et hierarki som viser hvordan delene er koblet sammen
+            - feks navigasjonskart
+        Gå deretter til undersider og organiser innholdet logisk
+        Ideell når man har en klar visjon
+        - Gir tydelig og konsistens struktur
+        - passer godt for prosjekter med klare mål eller fast struktur
+        - Mindre fleksibel for endringer
+            - strukturen påvirkes av justeringer på toppnivå
+            - Gir lite rom for å vokse
+                - hiof er godt eksempel
+                    - bra i begynnelsen. Så kommer det flere fag, flere studenter, flere ansatte, flere tilbud.
+                    - Som et hus med flere og flere påbygg. 
+        - Krever nøye planlegging og god innsikt i brukerens behov fra begynnelsen av
+    - Bottom-up
+        - Begynner på detaljnivå ved å fokusere på innholdet først, og deretter bygge opp til en større struktur
+        - fokuserer på innholdet først.
+        - tenk blogg eller matprat
+            - Selve innholdet først
+            - så begynt å bygge ut nettstedet, med filter og kategorier
+        - Identifiser og optimalser enkeltinnhold som artikler, produkter eller funksjoner
+        - Grupper innholdet basert på likhterer eller brukermønstre
+        - sett sammen gruppene til en helhetlig struktur
+        - svært fleksibelt
+            - plass til å vokse
+            - spesielt for dynamisk eller skiftende innhold
+            - når det legges til ny oppskrift (matprat) så kommer det først
+                - ikke utfordring med å finne plass til det
+        - gir innsikt i brukerens behov ved å organisere eksisterende innhold
+        - Passer godt for innholdsproduksjon som blogger og nyhetssider
+        - kan føre til kaotisk struktur hvis ikke nøye organisert
+            - planlegging er veldig viktig
+        - krever ofte revisjoner for å sikre sammenheng i den overordnede strukturen
+        fungerer best når det er behov for fleksibilitet, og når innholdet må tilpasses brukerhov som avdekkes underveis
+
+Planlegge navigasjon
+- Hvordan kommer jeg til spesifikt innhod
+    - er det betalingsmur?
+- hvor kan jeg gå
+- hvor langt er det til mål
+- alltid brukertest navigasjonen din
+- planlegging
+    - hvor er vi?
+    - Hvor kan jeg gå?
+    - Triltro til siden
+- Bruk det som funker (konvensjoner)
+    - tenkt skilt (rød prikk, "her er jeg")
+            hjem
+            produkter
+            om oss
+            bukser
+            etc
+- global navigasjon
+    - det som er likt på alle sider
+- tenk nivåer
+    - undermeny innenfor feks sko
+- hjem-knapp
+    - må noen ganger ofres
+    - feks basert på målgruppe
+    - eks. PS store. Ikke bestemor som hovedgruppe, da kan kanskje hjemknappen droppes
+
+Brødsmulesti
+- viser hvor du har gått
+- best praksis
+    "Dont make me think - Steve Krug"
+    - ha de på toppen av siden
+    - bruk > for skille nivåer
+    - Bruk fet skrift for å utheve hvor på stien du er
+    - la forbigående nivåer være linker
+- Veldig
+
+
+Skisser vs Wireframes
+- Skisser er raske for å få ideer ned på papir
+- tilbakemelding
+- lage Wireframe
+    - hvor skal ting være plassert
+    - Start med mobil!
+
+Skjermoppløsning
+- ca 2000: 800 x 600
+- ca 2007: 1024 x 768
+- ca 2015: 1380 x 980, 2560 x 1200, 480 x 340, 768 x 560 ....
+- mobile first
+    - er det ikke for mobil, finnes det ikke på nett
+    - google er mobile first.
+-Tenk forskjellig skjerm når du tenker innhold
+- du skal aldri tvinge innholdet til å passe designet for ulike skjermer!
+Respoonsivt design
+- samme html-fil og samme innhold uansett skjerm
+    - det er i css ting skjer
+- Designet skaleres basert på størrelsen på skjermen det vises på
+- designet skaleres basert på størr enn og midre enn, ikke fast størrelser
+- planlegges ved å tenke grid
+    - flytende kolonnebasert struktur forenkler responsivt design
+    - tenk legoklosser
+    - start med mobil!
+        - man skal ikke fjerne innhold
+            - en risiko dersom man starter med pc
+
+Det gylne snitt som designprinsipp
+- husk dette i designfasen / wireframe
+- link pp, s. 22
+
+Mobile fires - hva gjør en mobilside bra
+- Lasting av små bilder
+    - å kun skalere gjør ingenting med størrelsen på selve bilde
+    - bruk <picture>
+- responsivt design
+- unngå hardkodede fontstørrelser
+        - bruk liquid fontstørrelser
+- fjern/juster margin og padding
+        - margin kan gjøre det vanskeligere å trykke på ting, padding motsatt
+- en lang side i stede for en bred
+        - tenk scroll
+- Tenk touch!
+- Navigasjon/hamburgermeny
+- Fjerne dynamisk innhold?
+        - slider, hover, animasjon
+            - feks hover funker jo ikke på touch 
+- Kun én kolonne?
+
+Printvennlige sider
+- feks video på siden
+        - bytte ut videoen med link
+- kun artikkelen
+        - trenger ikke nav, slider, annonser
+- Gjøres i css. 
     
 -->
