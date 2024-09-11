@@ -1,0 +1,37 @@
+td, th {
+    border: 2px solid black;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.dag {
+    background-color: rgba(115, 132, 242, 0.5);
+}
+
+.tid {
+    background-color: rgba(243, 196, 7, 0.5);
+}
+.webutvikling {
+    background-color: rgba(31, 148, 237, 0.5);
+}
+
+.prog {
+    background-color: rgba(79, 177, 57, 0.5);
+}
+
+.iddp {
+    background-color: rgba(255, 149, 0, 0.5);
+}
+
+.ovingstime {
+    background-color: rgba(79, 177, 57, 0.5);
+}
+
+.lab {
+    background-color: rgba(31, 148, 237, 0.5);
+}
+
+.mentor {
+    background-color: #9c07f380;
+}
