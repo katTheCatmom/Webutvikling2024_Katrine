@@ -9,7 +9,7 @@ body {
 header nav ul {
     display: flex;
     list-style: none;
-    gap: 0.5rem; /* Tar utgangspunkt i HTMLs satte størrelse. Default er 16px. 0.5rem er da 8 px.*/
+    gap: 0.5rem; /* Tar utgangspunkt i HTMLs satte størrelse. Default er 16px. 0.5rem er da 8 px. Er best practice mtp responsivt design*/
     padding: 0;
 }
 
