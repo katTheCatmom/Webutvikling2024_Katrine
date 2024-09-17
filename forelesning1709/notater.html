@@ -1,0 +1,101 @@
+<!--
+
+CSS : Syntaks og selektor
+- Er et sett med regler for hvordan strukturspråk (HTML/XML) skal fremvises
+- "Cascading referer til hvordan css-regler blir brukt og prioritert når flere stiler kan gjelde for et element"
+    - leses ovenfra og ned
+    - overskrides ved ID og klasser
+- Brukes til å kontrollere layouten, fargene, skriftene, og andre visuelle aspekter av en nettside
+
+- nettleserkompatibiltet: https://caniuse.com
+
+- Består av en selektor og et sett med deklarasjoner
+    - selektor:
+        - Den delen av CSS-regelen som bestemmer hvilke HTML-elementer som skal styles
+    - Deklarsjon:
+        - Beskriver stilen som skal anvendes
+        - Består av egenskap og en verdi
+    - Egenskap:
+        - Hva som skal endres
+            - font size, color, margin etc
+    - Verdi:
+        - Spesifikasjon av hvordan egenskapen skal settes
+            - red, 16px etc.
+
+- Selektorer: Type
+    - Stiler alle forekomster av et element
+        - h1, p, article
+    - Nyttig når du vil style alle elementer av en bestemt type på samme måte
+    - bruk type-selektorer for generelle, grunnleggende stiler
+        - Default styling
+    - type-selektorer har lav spesifisitet
+        - kan lett overstyres av andre mer spesigikke selektorer som klasser eller ID-selektorer
+
+- class(.)
+    - Stiler alle forekomster av et element som har samme klasse
+    - Lar deg gjenbruke stilregler på tvers av flere elementer
+        - Gir mer konsistent og lettere å vedlikeholde
+    - Gjør det lettere å lage modulær og komponentbasert CSS
+        - Holdbar CSS
+    - Har høyere spesigisitet enn type-selektorer
+    - Gjør det lettere å lage modulær og komponentbasert CSS
+
+- ID(#)
+    - Når du skal style eller maioulere et spesifikt, unikt element på siden.
+        - hovedheader, footer, eller en bestemt seksjon
+    - brukes ofte i kombinasjon med JS for å enkelt hente og manipulere spesifikke elementer på siden
+    - Har høy spesifisitet
+        - Nyttig når man vil sikre at en bestemt stil blir brukt
+    - Skal kun brukes én gang per side.
+        - begrenser gjenbruken av stiler sammenlignet med klasser (kan brukes flere ganger)
+    - Vil overskrive både class og type
+
+- universal (*)
+    - vær forsiktig med den
+    - Alt på hele siden, absolutt alle elementer
+    - Margin, padding, dersom det skal endres på alle elementer
+    - A-C bruker den til box-sizing
+        - for å passe på at hun har full kontroll
+    - Har lav spesifisitet
+        - også tyåe-selektor kan lett overstyre universal
+
+- attributt ([type="text"])
+    . style spesigikke inndatafelt
+        - tekstfelt, passordfelt, radioknapper
+    - style lenker som attributter som href
+    - Bruk data-attributter for å tilføre semtantikk og kontroll i HTML-elementene, og style dem med attributt-selektorer
+    - fint for å unngå unødvendige klasser og ID-er
+
+- Pseudoklasser
+    - eks :hover
+    - brukes ofte for å tilpasse stiler når en bruker interagerer med siden
+    - begynner alltid med :
+    - eks :hover eller :focus gir forbedrer UX ved å gi visuelle tilbakemeldinger på interaksjoner
+    - :first-child, :last-child, og :nth-child
+        - gir utviklere kontroll over styling basert på elements posisjon i DOM-en, uten å måtte bruke klasser eller ID-er
+        - DOM -> 
+        - Veldig fint ved JS eller programmering
+            - ikke alltid man kan sette en ID på et element
+
+- pseudo-elementer
+    - En selektor som brukes for en spesifikk del av et element
+    - Begynner med ::, etterfulgt av pseudo-element
+    - Gjør det mulig å endre utseende på spesifikke deler av innholdet uten å endre HTML-koden
+    - Man kan legge til dekorative elementer eller ekstra innhold uten å faktisk legge til mer HTML-kode
+    - Fint eksempel i presentasjonen (s. 11)
+
+- Selektorkjeding
+    - Bruker flere selktorer sammen for å definere stilregler som kun gjelder elementer som matcher alle kriteriene i kjeden
+    - Plassere dem etterhverandre uten mellomrom, eller med spesifikke deg som skiller dem basert på ønsket kombinasjon
+    - Gir muligheten til å være ekstremt spesifikk i hvordan elementer skal styles
+    - Gir renere kode, da man unngår unødvendige klasser og ID-er
+    - Hjelper til med å forstå dokumentets hierarki og hvordan stiler anvendes på tvers av dette
+
+- Gruppe-selektor
+    - Kan effektivt anvende det samme settet med regler på flere selektorer ved å gruppere dem
+    - Når flere selektorer deler de samme stilreglene, kan du kombinere dem ved å separere hver selektor med et komma
+    - Ved å gruppere reduserer man duplisering av kode
+        - gir mindre og mer vedlikeholdsvennlig CSS-fil
+    - Miinimerer risikoen for feil, ved at man har stilregelen ett sted
+    - Sikrer at stilen er konsistent på tvers av elementer som deler visuelle egenskaper
+-->
