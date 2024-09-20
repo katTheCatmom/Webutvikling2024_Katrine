@@ -1,0 +1,140 @@
+<!--
+CSS: Box model, målenheter
+
+CSS box model
+- boksen består av fire deler:
+    - Innhold
+        - kjernen i boksen
+        - tekst, bilder osv
+    - Padding
+        - Avstanden mellom innholdet og bokskanten
+    - Border
+        - Rammen rundt boksen
+    - Margin
+        - Avstanden mellom boksen og andre elementer
+- egenskaper
+    - 6 egenskaper som bestemmer hvordan boksen oppfører seg
+        - påvirker både:
+            - layout
+            - dimensjonering
+            - hvordan boksen interagerer med andre elementer på siden
+        - egenskaper:
+            - box-sizing
+                - kontrolloerer hvordan bredde og høyde på en boks skal beregnes
+                - content-box
+                    - Standard
+                    - gjelder kun innholdet i boksen
+                    - padding og border legges utenpå
+                - Border-box
+                    - gjør livet lettere enn content-box
+                    - bredde og høyde inkluderer padding og border
+                    - Gjør det enklere å håndtere total størrelse på boksen
+            - display
+                - En av de viktigste egenskapene
+                - avgjør elementets plassering på siden
+                - Block
+                    - elementet tar opp hele bredden av sin overordnede beholder
+                    - starter på en ny linje
+                    - <p>
+                - Inline
+                    - elementet tar kun opp så mye plass som innholdet trenger
+                    - kan gjøre det litt vanskelig å jobbe med de
+                        - setter de gjerne til block / inline-block
+                    - plasseres på samme linje som andre elementer
+                    - <span>
+                - Inline-block
+                    - kombinerer egenskaper fra både inline og block
+                        - får fordelene til block
+                            - margin, padding etc
+                        - tar kun den plassen den trenger, ikke hele linja
+                    - kan plasseres inline, men også ha bredde og høyde
+                - Flex
+                    - brukes i flexbox layout.
+                    - tillater dynamisk justering av bokser i en beholder, basert på plass tilgjengelig
+                - Grid
+                    - Brukes i CSS Grid-layout for å lage komplekse oppsett
+                - None
+                    - Elementet blir ikke rendret på siden
+                    - fjernes også fra domet
+            - float
+                - ... Just don't.
+            - line-height'
+                - styrer hvor mye vertikal plass det er mellom linjer i et element som inneholder tekst
+                - påvirker hvor stor innholdsboksen blir
+                    - når teksten strekker seg over flere linjer
+                - påvirker kun innholdsboksen (der teksten er plassert)
+                    - ikke direkte padding margin eller border
+            - position
+                - kontrollerer hvordan et element plasseres ift andre elementer
+                - static
+                    - standard
+                    - elementer plasseres naturlig i dokumentflyten
+                - relative
+                    - gir mulighet til å flytte på ting
+                    - kan være kronglete å bruke, men noen ganger nødvendig
+                    - lar deg plassere elementet i forhold til dets normale posisjon
+                        - ved hjelp av offset-verdier
+                            - top
+                            - left
+                            - bottom
+                            - right
+                - absolute
+                    - posisjonerer elementet i forhold til nærmeste plasserte forelder
+                    - elementet blir fjernet fra dokumentflyten
+                    - Tar et elementet, fjerner det fra dokumentflyten, flytte det dit man vil.
+                        - Kan ligne på none, men det forsvinner ikke domet
+                        - se form label
+                - fixed
+                    - elementet er fastplassert på siden ift til viewport (vinduet)
+                - sticky
+                    - kombinerer relative og fixed
+                    - oppfører seg som relative til en viss posisjon på siden
+                        - deretter fester det seg
+            - z-index
+                - bestemmer hvilke elementer som ligger foran andre i et lagdelt layout
+                - kan være hendig ved bruk av absolute, fordi ved absolute legger elementet seg øverst
+                    - kan noen ganger føre til trøbbel. Da er z-index fint, for å flytte elementet lenger bak
+                - fungerer kun på elementer med position satt til:
+                    - relative
+                    - absolute
+                    - fixed
+                    - sticky
+- andre egenskaper som påvirker box model
+
+CSS måleenhet
+- absolutte enheter
+    - px
+    - cm
+    - mm
+    - in
+- relative enheter (realtivt til noe annet)
+    - em
+    - rem
+    - vw
+    - vh
+    - %
+- vw
+    - viewport width
+    - refererer til en prosentandel av bredden på brukerens viewport
+        - synlig del av nettleservinduet, ikke enheten
+- vh
+    - viewport height
+    - refererer til en prosentandel av høyden på brukerens viewport
+   
+Hvordan velge riktig måleenhet:
+    - Piksler (px)
+        - Når du ønsker en fast størrelse som ikke skal endre uansett kontekst
+        - eks. brødtekst. burde være like leselig
+            - 16px skriftstørrelse <p> burde kanskje være lik på mobil og desktop
+                - overskrift kan kanskje være forskjellig
+    - Prosent (%)
+        - for å lage responsivt design som tilpasser seg foreldrelementets størrelse
+    - em / rem
+        - for å skalere elementer ift font-størrelsen
+        - nyttig når man ønsker at layouten skal endre seg med brukerens skriftinnstillinger
+    - viewport-enheter (vw, vh)
+        - Du vil at elementene skal være relative til skjermstørrelsen
+            - iavhengig av innhold eller foreldreelement
+   
+
+-->
