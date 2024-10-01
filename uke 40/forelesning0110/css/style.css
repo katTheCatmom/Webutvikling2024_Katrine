@@ -1,0 +1,71 @@
+html {
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box; /* Sette border-box på alt. Da har man full kontroll på absolutt alle elementene*/
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+}
+
+#main-logo {
+    width: 100%;
+    max-width: 250px; /*Bilde kan ikke bli bredere enn dette. kan bli smalere tho*/
+    display: block;
+    margin: 0px auto; /* kombinert med display:block legger den i midten. Bruk auto og ikke masse px beregninger for å få den i midten. 0px oppe og nede, auto på sidene*/
+}
+
+.flex-menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem; /* egenskap som kun følger flex og grid*/
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /*Når det ikke er plass til alt på linja, bryt. legg deg under*/
+
+    a{      /* man kan nå neste i css! isteden for en egen som hete .flex-menu a {}*/
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.flex-space-b {
+    display: flex;
+    justify-content: space-between;/*flex spesific. kontrollere tilgjengelig luft som er i tillegg til elementene inni flex*/
+    flex-wrap: wrap;
+    gap: 1rem; /* for bedre gap mellom meny og søkefelt*/
+}
+
+#outlet {
+    color: #ff0000;
+}
+
+.flex-space-b form {
+    position: relative;
+}
+
+.flex-space-b form label {
+    visibility: hidden; /* Fjerner ordet "søk" visuelt. Er fortsatt tilgjengelig for leseverktøy*/
+    position: absolute;
+}
+
+.flex-space-b h2 {
+    width: 100%;
+}
+
+.product-card {
+    max-width: 350px;
+    min-width: 200px;
+    width: 100%;
+    box-shadow: 13px 9px 20px 0px #efefef;
+    border-radius: 4px;
+    padding: 1rem;
+}
