@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+/*Legge inn en div under body, for å få alt i flex*/
+/*Gjøre header om til flex-container for å sentrere tittel vertikalt også?*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-image: url(../bilder/mjauraff.jpg);
+    background-size: cover;
+    height: 30rem;
+
+    h1 {
+        text-transform: uppercase;
+        width: fit-content;
+        display: block;
+        margin: 0 auto;
+        font-size: 500%;
+        color: white;
+    }
+}
