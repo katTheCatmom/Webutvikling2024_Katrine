@@ -1,0 +1,92 @@
+<!--
+Flexbox (og grid) Blir en stor del av eksamen!
+
+- I motsetning til grid formes flexbox rundt en akse
+- er en "ny" layout-metode i CSS3 (10 år..)
+    - erstatter div og float strukturert-grid
+        - før brukte mye div og float for å strukturere plasseringer
+            - helt utgått nå. ikke bruk det om man kommer over det som eksempler på feks andre nettsider.
+    - fleksible bokser
+- Veldig enkelt å forstå når man først forstår det
+- Gjør det enkelt å midtstille både horisontalt og vertikalt
+
+flex container
+- nødvendig for å bruke flex
+    - foreldre-elementet må settes til å være flex
+    - Er foreldreelementet satt til flex -> alle barneelementene blir flex-items
+- flex container
+    - er det elementet som har display: flex
+        - typisk main, section, også noen ganger article
+        - rammen rundt alt det man vil "flexe"
+    - bestemmer hvilken retning elementene skal flyte
+        - row (defahlt)
+            - normalt fra venstre til høyre, og topp til bunn
+        - row-reverse
+            - høyre til venstre
+            - opplesningsverktøy tar ikke hensyn til dette, den baserer seg på html-strukturen
+        - column
+            - vertikalt fra topp til bunn
+        - column-reverse
+            - fra bunn til topp
+            - opplesningsverktøy tar ikke hensyn til dette, den baserer seg på html-strukturen
+    - flex-wrap
+        - bestemmer hvordan elementet skal hoppe til neste linje (eller neste rad) dersom det ikke er plass til flere
+        - nowrap (default)
+            - hopper ikke til neste linje eller rad
+        - wrap
+            - hopper automatisk til neste linje eller rad om det ikke er mer plass
+            - gjør designet responsivt med én gang
+        - wrap-reverse
+            - første element hopper til ny linje først
+
+flex item
+- funker kun på barneelementer, ikke barnebarn
+- Gjør at man kan bestemme hva som skal skje med den ekstra "luften" man har til overs. 
+    - Hvordan den skal fordeles
+- justify-content
+    - justerer hvordan elementene fordeles langs hovedaksen
+    - fordeler child elementer på den tilgjengelige plassen i foreldre-elementet (så fremt det er ledig plass)
+        - flex-start (default)
+            - elementer er posisjonert etter hverandre normalt
+        - flex-end
+            - elementer er plassert i høyre endre av foreldreelementet normalt
+        - center
+            - alle elementer er posisjonert i midten
+        - space-beteween
+            - ledig plass i foreldreelementet blir fordelt likt mellom elementene
+        - space-around
+            - ledig plass blir fordelt mellom elementene of foreldreelementet
+        - initial
+            - nuller ut tidligere bestemmelser og setter den til normalverdier
+        - inherit
+            - arver fra foreldreelementet
+
+(Se egen slide!
+align-items
+    - justerer hvordan elementene plasseres langs kryssaksen (motsatt av justify-content)
+- baseline
+    - justerer etter tekstens grunnlinje
+)
+
+- order
+    - bestemmer rekkefølgen på elementene
+        - man besetemmer hvilken posisjon i rekkefølgen elementet skal ha
+    - default er 0.
+        - elementet havner der det er satt opp i HTML
+    - kontekst er viktig: Når er dette viktig?
+        - kan være noen tilfeller hvor det er ønskelig
+
+- flex-grow
+    - bestemmer i hvilken grad elementet skal vokse ift søsknene sine
+    - default er 1
+        - alle vokser på lik linje med hverandre
+    - høyere verdi -> elementet blir raskere større enn de andre elementene
+
+- flex-shrink
+    - samme som flex-grow, bare motsatt
+    - ved 0 som verdi -> elementet ekrymper ikke i det hele tatt
+    - høyere enn 1 -> elementet krymper raskere enn de andre elementene
+
+Width: 100 vw
+height: 100vh
+-->

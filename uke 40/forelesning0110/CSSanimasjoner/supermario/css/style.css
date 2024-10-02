@@ -67,7 +67,7 @@ main {
     to {right: 347px;}
 }
 #supermario {
-    /*background-image: url("../sprites/staa.png"); Kommenteres ut nå for at den ikke skal overskride animasjonen.*/
+    /*background-image: url("../sprites/staa.png");     Kommenteres ut nå for at den ikke skal overskride animasjonen.*/
     background-size: cover;
     z-index: 999; /*Garantert at Mario alltid ligger i det øverste laget*/
     height: 50px;

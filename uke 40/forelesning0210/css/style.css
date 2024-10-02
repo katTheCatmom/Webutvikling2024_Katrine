@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+#container {
+    display: flex;     /*med en gang flex er satt, er inspektoren til stor hjelp, faktisk. God oversikt over barneelementer, og verdiene satt*/
+    /*flex-direction:column  ikke lurt. Bedre å få elementer til å ligge der man vil gjennom å justere bredden på barneelementene, kombinert med wrap*/
+    flex-wrap: wrap;
+}
+
+header, nav, footer {
+    width: 100%
+}
+header, nav, main, aside, footer {
+    flex-grow: 1; /* for at det ikke skal bli whitespace når elementene wrappes. Kommenter ut denne for å se (min-width i main gir problemet)*/
+    padding: 1rem;
+}
+
+header {
+    background-color: rgb(87, 140, 232);
+}
+
+nav {
+    background-color: pink;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        gap: 1rem;
+    }
+}
+
+main {
+    background-color: aquamarine;
+    width: 70%; /* Main tar 70% av bredden, aside har fått de 30 siste*/
+    min-width: 500px; /* Trengs kun på main, ikke aside også, for at det skal funke*/
+    display: flex; /* Main må også bli en flex-container for herje med artikkelkortene*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h2 {
+        width: 100%;
+    }
+
+    article {
+        width: 30%;
+        min-width: 250px;
+        flex-grow: 1;
+    }
+}
+
+aside {
+    background-color: rgb(102, 143, 190);
+    width: 30%;
+}
+
+footer {
+    color: #fff;
+    background: rgb(53, 53, 53);
+}
