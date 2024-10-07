@@ -15,4 +15,44 @@ CSS Grid
 - Alle teknologiene baserer seg på en form for grid
     - Div'er og Flex formes rundt én akse
     - Grid formes rundt to akser
+
+Grid layout
+- Todimensjonalt grid-basert layout system
+- Genialt!
+    - SLipper å sloss med
+        - floats
+        - posisjon
+        - andre hacks
+    - responsivt
+
+The basics
+- Et rutenett med rader og kolonner som vi kan fylle med innhold
+- Viktige begreper:
+    - Grid container
+        - display: grid;
+        - Sammen med egenskapene grid-templase-columns og grid-template-rows, definerer:
+            - hvor mange rader og kolonner som ønskes
+                - samt hvor store disse skal være
+    - Grid item
+        - Kan gis en rekke egenskaper 
+        - I hovedsak bestemmer vi hvor vi vilat elementene skal plasseres i en større grid-container
+        - float har ingen innvirkning på grid items
+        - egenskaper for å spesifisere plasseringen av items:
+            - grid-column-start
+            - grid-column-end
+            - grid-row-start
+            - grid-row-end
+            - grid-row
+            - grid-column
+    - Grid line
+    - Grid cell
+    - Grid track
+    - Grid area
+
+Definere områder for item og container
+- vi kan også definere opp områder der vi vil plassere items
+- Vi gir griditems navn med egenskapen grid-area: "name"
+- Vi kan plassere dette elementet i et ferdigdefinert område i grid-containeren vår ved egeneskapen:
+    - grid-template.ares: "name name name"
+
 -->
