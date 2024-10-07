@@ -25,14 +25,15 @@ header {
     display: flex;
     flex-wrap: wrap;
     background-image: url(../bilder/mjauraff.jpg);
-    background-size: cover;
+    background-size: 100vw;
+    background-repeat: no-repeat;
     height: 30rem;
     width: 100%;
     min-width: 500px;
     justify-content: center;
     align-items: center;
 
-    h1 {
+    h1 { /* Gjøre så denne ikke forsvinner ved nedskalering*/
         text-transform: uppercase;
         width: fit-content;
         font-size: 500%;
