@@ -1,0 +1,78 @@
+<!--    Responsivt design og Media queries
+
+        Denne pp er god som notater frem mot eksamen
+        fontawesome.com/icons -> masse gratis ikoner
+            - trykk på ikonet -> kopier html.koden
+            - kan farges og styres med i css
+            - For å linke til det i <head>:
+                - Ligger innunder "Reference Font Awesome in Your Project":
+                - https://docs.fontawesome.com/web/setup/host-yourself/webfonts
+                - Alle tre linkene må med.
+                - ( husk å endre '/your-path-to-fontawesome' til faktisk plassering tho )
+
+responsivt design
+- en HTML-fil som tilpasser seg basert på skjermen den vises på
+- google bruker mobilversjonen av innholdet for indeksering og rangering
+    - aka. har du ikke mobilversjon -> er du ikke på google
+- skaper mindre administrasjons- og vedlikeholdsbehov
+
+Responsive nettsider (litt repetisjon)
+- siden er lang istedenfor bred
+    - kun én kolonne?
+- Tenk touch
+    - funksjonaliteter skjult pga :hover?
+- Navigasjon
+    - Hamburgermeny?
+
+Design for responsive nettsider
+- mobile first?
+- Design wireframes/skisser for både desktop og mobil
+    - start med mobil
+        - Det er lettere å legge til innhold/funksjon og andre elementer når man jobber seg oppover
+- Planlegg for begge fra begynnelsen
+    - mobil
+        - Hamburgermeny?
+        - headerbilde?
+    - desktop
+        - hover/dropdown meny?
+        - slider?
+- fin illustrasjon, s.4
+
+<meta viewport>
+- for at responsive media queries skal fungere, må denne tagen være med
+    - øverst i <head>
+- <meta name="viewport"
+        - Gir nettleseren instruksjoner om sidens dimensjoner og skalering
+- width=device-width
+        - sier at sidens bredde skal følge enhetens skjermbredde
+- initial-scale=1.0
+        - setter zoom-nivå når siden lastes inn i nettleseren
+
+Hva er media queries
+- Media Queries er essensielle for å lage responsive nettsider
+- Det er et CSS konsept der man kan velge hvilken skjermstrl som skal få den spesifikke stilen
+- Lar deg presentere det samme innholdet på forskjellige måter utifra skjermstrl/oppløsning
+- endrer ikke innholdet, kun stilen
+
+breakpoints
+- et punkt/størrelse hvor annen eller tilpasset CSS-kode skal gjelde fra
+        - eks. 1920px, 480px
+- Hold oss til 3-5 brytningspunkter.
+    - 3 er ideelt.
+        - desktop
+        - pad
+        - mobil
+- Best practice:
+    - La innholdet bestemme breakpoints
+    - Skrive kode/planlegg design inkludert
+    - mobil > jobb deg oppover
+    - Måleenheter:
+        - pixel
+            - bryte design basert på enheter/skjermstørrelser
+        - em
+            - bryte design basert på tekstinnhold
+bootstrap (har også noe om mobile-first)
+    - men bruk med omhu
+
+
+-->
