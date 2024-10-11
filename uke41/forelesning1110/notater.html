@@ -1,0 +1,53 @@
+<!--    Bilder og typografi
+
+Lasting av bilder
+- nedskalering av bilder gjør ingenting med filstørrelsen.
+- HTML-taggen <picture>
+- unngå hardkodede fontstørrelser
+- gjern/juster margin og padding
+- resposive bilder -> bytte filstrl på bildene avhengig av skjermstrl
+    - kan det nedskaleres -> gjør det. Da liker google deg bedre
+
+Responsiv typografi
+- teksten blir like tilgjengelig på desktop og mobil
+- Størrelseangivelse
+    - Em
+        - element size
+        - 1em = basert på fontstørrelsen av elementet det brukes på
+        - kan fort miste kontroll med denne. 
+    - Rem
+        - root element size (<html>)
+        -1 rem = basert på fontstørrelsen av rotelementet (<html>)
+        - Eks: Hvos HTML-elementer har fontstrl 16px
+            - 10rem = 10 x 16 = 160px
+        - bruk denne på fontstrl
+    - vw
+        - viewport width
+        - bredden av tilgjengelig nettleservindu, ikke skjermstrl
+        - 1vw = 1/100 av tilgjengelig nettleservindu
+    - vh
+        - viewport height
+        - høyden av tilgjengelig nettleservindu, ikke skjermstrl
+
+Fontstrl - best practice
+- Em
+    - blir fort rotete
+- Rem
+    - enklere, men krever mer tilpasning i media queries for å se bra ut på ulike skjermer
+- vw
+    - responsivt, men veldig smått på små skjermer, og verlig stort på store skjermer
+- riktig:
+    - angi basis fontstrl som en utregning basert på standard fontstrl i nettleseren + skjermstørrelse
+    - kjekt å få inn med en gang
+    - html {
+        font-size: calc(1em + 1vw);
+      } 
+            - 1 em -> ivaretar brukerens insstilinger på fontstrl
+            - + 1vw -> kalkulerer basert på vinduet + fontstrl til html
+    
+    - Denne løsningen tar hensyn til strl på skjermen, men vil ha en fast strl å skalere etter
+    - Tar hensyn til brukere (tilgjengelighet)
+        - hvis brukeren har justert fontstrl i nettleseren, vil teksten skaleres etter det
+
+
+-->
