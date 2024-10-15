@@ -1,0 +1,103 @@
+<!--        Sass
+
+Hva er sass?
+- Et utvidelsesspråk for CSS
+    - Gir designere mulighet til å strukturere filer mer oversiktelig
+    - Ser ut, føles, og skrives på samme måte som CSS, men
+        - Kan bruke grunnleggende programmeringssyntaks for å lage dynamisk CSS
+        - SASS må kompileres til vanlig CSS før den kan brukes i HTML
+            - finnes programmer, extensions, plug-ins for dette. Kan ikke gjøre dette selv.
+            - Live Sass Compiler
+
+Nesting av selektorer
+- Kan neste flere stilregelsett inni hverandre
+    - Slik at de kun gjelder for elementwr som er omsluttet av de(n) utenforliggende elementene.
+- Gjør det enklere å organisere CSS-reglene hierarkisk og mer oversiktelig
+- Altså: Nesting
+    - klasser kan også nestes, bare husk at det kun gjelder klasse-forekomsten innenfor nestingen.
+
+Referere foreldreselektoren
+- Man kan skrive stiler for pseudoklasser og pseudoelementer direkte innenfor elementets stilregel
+    - :hover er et eksempel på pseudoelement
+- &-tegnet
+    - Indikerer at man skal style det gjeldende elementet i kombinasjon med, eller under spesifikke forhold
+        - eks: :hover-status på en link
+    a {
+        color: #333;
+
+        &:hover {
+            color: orange;}   <-- skal denne { med?
+    }
+
+Variabler i SASS
+- gjenbrukbare kodenavn
+- kan brukes til mye mer enn fargekoder
+- Gjør det enklere å administrere
+- genialt dersom en kunde feks. ønsker å endre en farge, og du har skrevet hexakoden 50 ggr
+$gray: #333;
+$mac-wifth: 100px
+
+div {
+    color: $gray;
+    width: $max-width
+}
+
+Mixins
+- Små funksjoner som kan brukes for å generere CSS-kode
+- Fungerer som en template, også fyller man bare inn verdiene.
+- lar deg lage gjenbrukbare biter av CSS-kode som kan inkludere
+    - verdier
+    - variabler
+    - CSS-egenskaper
+- Gjør det mulig å unngå repetisjon i koden
+- Reduserer vedlikehold
+    - Endringer gjøres på ett sted, og reflekteres overalt hvor mixinen benyttes
+@mixin border-radius($radius) {
+border-radius: $radius;
+}
+
+@mixin box-shadow($left, $top, $radius, $color) {
+box-shadow: $left $top $radius $color;
+}
+
+Extending
+- Gjør at man slipper å opprette klasser i HTML-dokumentet, man oppretter klassen i CSS
+- kontra mixin: kan ikke sende inn egne verdier. De er satt
+- Lar deg gjenbruke stilregelsett fra en selektorer til en annen, uten å duplisere CSS-kode
+- @extend
+    - Et element arver stilene fra et annen element
+        - reduserer kodegjentagelse
+- Effektivt for å lage variasjoner av et element som deler mange av de sammme stilene
+- Samler de felles stilene i en enkel CSS-regel
+    - reduserer filstrl
+- Fungerer med komplekse selektorer og pseudoklasser
+box-defaults {
+width: 100%;
+max-width: 1200px;
+}
+#introduction-box {
+@extend .box-defaults;
+background-color: #eeeeee;
+}
+
+struktur
+- Partials
+    - en SASS-fil som inneholder CSS/SASS-kode som inkluderer en annen gil
+    - eks:
+        En SASS-fil kalt main.scss, som er hovedfilen til main.css etter kompilering, og som kan brukes i HTML-filer
+        Du lager en partial kalt _colors.scss for å samle alle fargevariabler i denne
+        Denne fargepartialen kan deretter importeres til main.css ved hjelp av @import
+            - Fargevarablene er da tilgjengelige i hovedfilen
+    - Nyttige for å organisere og strukturere SASS-koden ved å dele den opp i mindre, mer håndterbare delere
+    - Kan ha så mange partials man vil i SASS
+        - Kan også inkludere andre CSS-filer
+    - Må inkludere en partial før man kan benytte innholdet i den
+    - !!! Filnavnet må starte med en understrek, som _colors.scss
+    - Partials blir ikke kompilert til egne CSS-filer
+    - Kan med fordel plasseres i mapper for å gjøre strukturen mer oversiktelig og lettere å navigere
+        - bidrar til mer organisert og forståelig kodebase
+    - Mappestruktur er viktig.
+
+
+
+-->
