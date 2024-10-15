@@ -1,3 +1,11 @@
+// Leserekkefølgen er viktig! 
+
+@use "_layout.scss";
+@use "loginn.scss"; // For å linke opp loginn.css til main.scss
+@import "colors.scss";
+
+
 body {
-    background-color: rgb(53, 101, 167);
+    background-color: $blue;
+    height: 100vh; // Gjør det mulig å sentrere form midt på siden
 }
