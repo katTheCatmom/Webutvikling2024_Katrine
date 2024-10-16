@@ -1,0 +1,10 @@
+// https://fonts.google.com/
+//      Get embeded code -> @import
+//      importa greier skal alltid ligge øverst!
+//      under lenkinga, står det hvordan man bruker den
+// importere flere fonter -> google vet, så det er bare å oppdatere lenkinga her inne. Trenger ikke å legge inn en ny link i tillegg til den som allerede står.
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$mainFont: "Roboto", sans-serif; //Robot -> importert font
+$sekundærFont: "Montserrat", sans-serif;

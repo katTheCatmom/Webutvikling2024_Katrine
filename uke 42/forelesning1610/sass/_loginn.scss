@@ -1,18 +1,36 @@
-@import "_colors.scss"; 
+@use "colors" as *; 
+@use "mixins" as *;
+@use "design" as *;
+@use "layout" as *;
 
 form {
-    background-color: $white;   // Benytter fargene opprettet i _colors.scss
-    padding: 3rem;
-    color: $black;
-    max-width: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 30px;    //For å runde hjørnene
-    gap: 0.5rem; //Skaper luft mellom elementene i form
+    color: $black; 
+    @extend .blurred-effect; //Kaller på klassen
+    @include flexbox(column, nowrap, 1rem);//gap: 0.5rem; //Skaper luft mellom elementene i form
+    @include box(600px, auto, 3rem, 30px); //Benytte mixin
 
+    label {
+        @include box(100%, auto, 1rem, 50px);
+        @include flexbox(row, nowrap, 1rem);
+        background-color: #fff;
+        
+        // endre litt på ikonene:
+        i {
+            @include box(50px, 50px, 0.5rem, 100%);
+            @extend .flex-container-center;
+            display: flex !important; // Tvinger ikonene til senter av sirkelen.
+            width: 50px; // Overstyrer vidden i mixin box. Så bakgrunnsfargen blir helt rund
+            background-color: $black;
+            color: $white; // Gjør ikonene hvite
+        }
+
+        input {
+            border: none; // Fjerne kanten på selve input-feltet
+        }
+    }
+    //for å stilsette Send inn knappen
     input {
-        padding: 1rem;
-        border: 1px solid $black;
+        @include box(200px, auto, 1rem, 10px);
+        background-color: $black;
     }
 }

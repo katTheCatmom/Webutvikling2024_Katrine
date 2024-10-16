@@ -1,4 +1,4 @@
-@import "_colors.scss"; 
+@use "colors.scss" as *; 
 
 form {
     background-color: $white;   // Benytter fargene opprettet i _colors.scss

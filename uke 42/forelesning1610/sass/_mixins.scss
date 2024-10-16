@@ -1,0 +1,16 @@
+// en mixin for en boks
+@mixin box($width, $height, $pad, $bradius) { //$  -> opprette variabler som parametere. kan kalle de hva som helst, men vær intuitiv. 
+    width: 100%;
+    max-width: $width;
+    height: $height;
+    padding: $pad;
+    border-radius: $bradius;
+}
+
+// mixin for flex
+@mixin flexbox($direction, $wrap, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
