@@ -1,0 +1,216 @@
+<!-- Universell utforming vs. tilgjengelighet m/ Marius Akerbæk
+
+
+Universell utforming (LSM)
+- WCAG
+    - Krav som inngår i regelverket
+    - Offentlig sektor skal følge 48 krav
+    - Privat sektor skal følge 35 krav
+    - https://www.uutilsynet.no/wcag-standarden/wcag-standarden/86
+        - Filtrere hva som gjelder for din virksomhet
+- fire prinsipper, som inneholder retningslinjer:
+    - Mulig å oppfatte
+        - Tekstalternativ
+        - Tidsbaserte medier
+        - Mulig å tilpasse
+        - Mulig å skille fra hverandre
+    - Mulig å betjene
+        - Tilgjengelig med tastatur
+        - Nok tid
+        - Antall
+        - Navigering
+    - Forståelig
+        - Lesing
+        - Forutsigbar
+        - Inndatahjelp
+    - Robust
+        - Kompatibel
+
+Forelesning:
+- UU forutsetter likeverdighet:
+    - Lik tilgang (tilgjengelighet) hvis mulig
+    - Likeverdig tilgang hvis lik tilgang ikke er mulig
+- Hvorfor tilgjelighet viktig:
+    - God brukerskiskk
+        - Alle skal kunne oppleve (så og si) det samme
+    - Konvertering/salg
+        - Selgende nettsider som ike får solgt taper penger
+    - Lovpålagt
+        - Med minstekrav for universell utforming
+            - Nye nettsider etter 1. juli 2014
+            - Ekisterende nettsider ved første redesign etter 1.7.2014 eller senest 1.januar 2021
+            - Tilgjengelighetserklæring et krav fra 2023
+                - !! Skal eksamenen vår innheholde !!
+                    - Finnes mal vi kan benytte på nett!
+    Regelverk
+    - krav: 35 av 61 suksesskriterier
+    - Tre nivåer av krav: A til AAA (Se prinsippene fra LSM)
+        - 1) Perceviable
+        - 2) Operable
+        - 3) Understandable
+        - 4) Robusthet
+Tilgjengelighet og UU
+- Syn
+    - blindhet
+    - Svaksynhet
+    - Fargeblindhet
+- Hørsel
+    - Sårlig hørsel
+    - Døv
+- Motorisk
+    - Begrenset finmotorikk
+    - Kun tastaturbruk
+    - Responstid
+- Kognitiv
+    - Læringsutfordringer
+    - Vansker med memorisering og fokus/konsentrasjon
+    - Bare ved å følge normer har man gjort mye
+
+Enkle prinsipper for tilgjengelig design:
+- Fornuftige alternative tekster på bilder
+    - Har bildet innhold eller er det kun "pynt"
+    - Gir vi en del informasjon i et bilde, som ikke er tilgjengelig i bildefilen -> vi har brutt lovverket. 
+- Fornuftig dokumentsstruktur
+    - påde HTML-kode og tekst
+    - Stikkord: Semantikk
+    - Skjermlesere forstår semantikken. 
+    - De forstår at headeren som regel inneholder metainformasjon. 
+- Gi tittelrader (headers) for tabeller
+    - Kan være fornuftig å gi hver row(?) en header.
+        - Google tabell og UU
+- Sørg for at brukere kan fylle ut og sende inn skjemaer
+    - Fylle ut, betydning:
+        - Sette inn riktig informasjon på riktig sted. 
+            - label og type og input hjelper mye
+        - Marius: Samt gi beskjed dersom informasjonen ikke er riktig
+- Sørg for at linker gir mening basert på kontekst
+    - Tenk nettartikler. Gode på linke til andre ting som er godt knyttet til temaet intergrert i tekst
+        - micro copying. 
+        - Linken integrert i teksten, med høyst bra beskrivende tekst. 
+            - altså ikke den typiske "klikk her". 
+- Ha hjelpetekster / transkripsjoner av media
+- Tilby tilgjengelige alternativer til innhold som ikke er HTML (PDF, Word-filer)
+- Gi brukeren mulighet for å droppe gjentagende elementer på en side
+    - "Skip to content"
+    - webaim.org har et godt eksempel på dette, om ikke Marius husker feil
+- Farge skal IKKE være eneste meningsbærende effekt på noe element
+    - feks. Trafikklys
+        - Hvis det er rødt lys, kan ikke kjøre.
+        - Illustrerer at farge ikke kan være eneste meningsbærende effekt
+            - fargeblindhet
+- Srøg for god lesbarhet i innholdet
+    - Overskrifter
+    - Tekstnivåer
+    - Lister
+    - Fontvalg, fontstrl
+    - Kontrollert bildebruk
+    - Kontroll fargebruk
+
+Ufordringer ved prinsippene (webdesigners perspektiv)
+- Krav til kontrast i farger
+- Farger kan IKKE være eneste meningsbærende effekt
+- Krav til bilder, audio/video og tekstinnhold
+- Krav til masinell lesbarhet
+
+Husk! Design uten innhold er pynt!
+
+"Hva med meg som webdesigner? Alle disse reglene ødelegger jo kreativiteten!"
+    - om man kun ønsker å jobbe med kreativitet og utseende
+        - Bli kunstner
+    - Webdesignere har et samfunnsansvar
+    - Viser heller hvem som er en ordentlig dyktig webdesigner. 
+
+    HVordan ivareta prinsippene:
+    - Web content Accessibility Guidelnes
+        - www.w3.org/TR/WCAG20/
+    - Lov om UU, krav og tilgjengelighetserklæring
+        - www.uutilsynet.no
+    - WebAccsessability in mind
+        - webaim.org
+
+I teknisk utforming av nettsider
+- God SEO == God UU
+    - god SEO -> semantikk, struktur og innhold.
+
+Noen HTML-tips for UU
+- Noter ned fra presentasjonen)
+    - inneholder eksempler
+- Bruk lang-attributtet for å markere språk
+    - for nettstedet generelt
+    - For fremmedspråklige fraser i tekst
+- lær deg semantisk tagger, og bruk dem
+    - Semantikk = mening
+        - Også for nettlesere/verktøy
+    - eks. nav. 
+        - Betyr at det her finnes navigasjonsmidler på nettstedet
+    - Semantiske tagger kan brukes som navigasjon
+- Lær attributten ROLES, og bruk dem
+    - Viser hvilken rolle et element spiller i strukturen
+    - <input type="submit" role="button" value="Send">
+    - <header role="button">
+    - Kan brukes til mer enn knapp
+    Brukes av skjermopplesere som hjelp dersom annen informasjon ikke er tilstrekkelig
+- Skip ti content
+    - En link i toppen av siden som lar brukerne hoppe rett til hovedinnholdet
+    - ARtikkel webaim -> Skip navigation links
+    - Overaskende enkelt å implementere i egen nettside
+- Skriv fornuftige verdier i alt-attributtet i <img>-taggen hvis bilde er en del av innholdet
+    - (<img> som kun brukes til deorasjon skal ha en tom alt-tekst: alt="")
+    - To go artikler i presentasjonen om dette
+- En "hidden" eller "screen-reader-only"-class i CSS
+    - Fjerner innhold fra viewport, men ikke fra koden
+    - Beholder lesbar kode uten å ødelegge struktur/design
+    - Kodeeksempel i presentasjonen
+    - Artikkel: WebAim -> Invisible content
+- For <table>
+    - Bruk <caption> for en beskrivende av tabellen
+    - Aldri tomme headere <th>
+    - Bruke scope="col" og scope="row" for å definere området <th> gjelder
+        - Scope Støttes ikke av HTML, men er viktig for skjermlesere
+        - Gir warning (ikke Error) av validator
+            - Kan trygt brukes (også på eksamen?)
+    - Har kodeeksempel.
+    - Artikkel: WebAim: Create accessible Tables    
+- Ha en synlig label i tillegg til placeholder for skjemafelter
+    - Ha synlig focus på skjemafelter (pseudoklasse :focus)
+    - Placeholder forsvinner ved focus på input, ergo vil en forklarende tekst mens man fyller ut hjelpe mange
+- Tilby et alternativt stilark med høykontrast brukeren kan velge
+    - krever JS og cookies/session
+        - Kan lages eget CSS-ark for darkmode gjennom SASS
+            - Gir høyde for de nettleserne som lar brukeren velge stilark
+    - Ideelt fargeoppsett:
+        - Svart bakgrunn
+        - Hvit tekst
+        - Gule og understrekede lenker
+    - Gult på svart gir den tydeligste kontrasten mtp UU
+- Bruk responsiv typografi
+    - Justeres etter brukerens egne innstillinger ift zoom/fontstrl
+    - For SASS:
+        - Google: "sass mixin for responsive typography"
+- Ved inkludering av <video> of <audio>
+    - Ha en tilte-attributt med beskrivelse
+    - Ha en tekst i tett nærhet til videoen med enten:
+        - Tekst som beskriver innholdet
+            - Ikke noe viktig informasjon skal mistes
+        - Tekstet video er et godkjent alternativ
+        - Lenke til tekst
+            - Full transkripsjon
+- Ved inkludering av video med <iframe> (Kunne like gjerne stått innunder datasikkerhet)
+    - Greit å unngå egt
+        - Mange nettlesere det ikke fungerer på 
+        - Siden den henter et helt nettsted, kan feil på siden vises på vår nettside
+    - Ha en title-attributt
+    - Ha en tekst i tett nærhet til videoen med link til YT-siden
+        - (HTML5-avspiller)
+    - Ha med tekst/lenke tik tekst
+        - traksipsjon
+    - Inkluder en <noframes>-tag som linker brukeren til YT-videoen
+- Bruk prinsipper for microdata og WAI-ARIA i koden din
+    - Dette hjelper (se presentasjon)
+
+
+VERKTØY:
+- Liste med linker i presentasjon
+- Accessibility Developer Tool er en plugin for Schrome
+
+-->
