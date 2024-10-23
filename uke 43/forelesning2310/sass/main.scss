@@ -1,0 +1,24 @@
+// https://sass-lang.com/guide/
+// Vi skal bruke @use, ikke @import!! @import er på vei ut.
+
+// Leserekkefølgen er viktig! 
+
+// Vi skal bruke @use, ikke @import!!
+@use "layout.scss";
+@use "loginn.scss"; // For å linke opp loginn.css til main.scss
+@use "colors.scss" as *; // "as *" For at mappa skal hentes inn rikitg. Kun hvis du vet hva som er partial "colors". Ikke gjør dette dersom det er hentet fra nett. Bruk i så fall en variabel -> eks: "colors" as c
+@use "fonts" as *;
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $blue; //c.$blue For å få brukt _colors-partial dersom @use "colors" as c.
+    height: 100vh; // Gjør det mulig å sentrere form midt på siden
+    font-family: $mainFont;
+    background-image: url("https://picsum.photos/1200/1200"); //Nytt random bilde for hver load
+    background-size: cover;
+}

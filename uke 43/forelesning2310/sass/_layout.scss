@@ -1,0 +1,7 @@
+// Gir muligheten til å sentrere et element, horisontalt og vertikalt, midt på skjermen.
+.flex-container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
