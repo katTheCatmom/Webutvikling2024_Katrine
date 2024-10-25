@@ -1,0 +1,60 @@
+@use "base" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include grid(1fr, auto auto auto auto);
+    margin: 0;
+}
+h1, h2, h3 {
+    font-family: $mainFont;
+}
+
+header {
+    grid-column: ("1 / 2");
+    grid-row: ("1 / 2");
+    .logo {
+        @extend .flex-list;
+        justify-content: center;
+     }
+}
+
+
+nav {
+    grid-column: ("1 / 2");
+    grid-row: ("2 / 3");
+    background-color: $lysGraa;
+    @extend .flex-list;
+    border-radius: 2rem;
+    ul {
+        @extend .flex-list;
+        flex-wrap: nowrap;
+        list-style: none;
+        margin: 2rem;
+        padding: 0;
+        width: 100%;
+
+        li {
+            a{
+                color: $tekstFarge;
+            }
+        }
+    }
+}
+
+
+//ul {
+//list-style: none;
+//display: flex;
+//flex-direction: row;
+//flex-wrap: nowrap;
+//justify-content: space-between;
+//margin: 2rem;
+//padding: 0;
+//position: fixed;
+//}
+

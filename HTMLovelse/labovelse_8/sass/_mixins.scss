@@ -1,0 +1,14 @@
+// mixin for flex:
+@mixin flexbox($direction, $wrap, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
+// mixin for grid:
+@mixin grid($column, $row) {
+    display: grid;
+    grid-template-columns: #{$column};
+    grid-template-rows: #{$row};
+}
