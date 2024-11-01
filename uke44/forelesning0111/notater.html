@@ -1,0 +1,93 @@
+<!--  Microdata og Rich results
+
+Microdata
+- En type strukurell data
+    - Gir mer mening til innholdet
+    - Søkemotorene klarer å fremvise det på en mer presis måte
+- Kan organisere og beskrive spesifikt innhold
+    - Produkter
+    - Hendelser
+    - Oppskriver
+    - mye mer
+- Følger spesifikasjonene til Schema.org
+- Gjør det mulig å vise rike resultater
+- Bedre brukeropplevelse
+    - Gir mer kontekst til innholdet
+    - enklere å finne spesifikke ting man søker etter
+- Øker semantikken i data
+- Gjør dataen lesbar av andre maskiner
+- Gjør internett til en stordatabase
+- Beskriver hva inneholdet er til:
+    - andre maskiner
+    - Søkemotorer
+    - Sosiale medier
+- Tilleggsdata vi kan legge til på vår allerede semantiske HTML
+
+Formater
+- RFDa
+    - Markere direkte i HTML
+- Microdata
+    - Markerer direkte i HTML som attributter eller json
+    - W3C standard
+- JSON
+    - JSON-LD data
+    - Legges i script
+
+Vokabularer "ordbøker"
+- Man kan ikke finne på ord selv! Det er et eget bibliotek for microdata
+- Vi skal benytte Schema.org
+- link til startguide i presentasjonen s.5
+
+Hvorfor?
+- Gir en superkrefter ovenfor søkemotorer, skjermlesere og maskiner som leser siden
+- Gir klare beskjeder om HVA innholdet er og HVORFOR det er der.
+- Eks:
+    - En artikkel
+        - Som har en forfatter
+            - Som har en affiliasjon til en avis.
+- Per i dag blir strukturell data mest brukt av søkemotorer
+    - mem det er en mulighet for å bruke dette for å gjøre internett enda bedre enn det allerede er
+
+Hvordan skrive microdata?
+- Legges til ved å bruke attributter på HTML elementene
+    - itemscope: "modertaggen"
+    - itemtype: Link til vokabular
+    - itemid: Unik id
+    - itemprop: Hva beskriver denne taggen
+    - itemref: Kan referere til en itemid i en annen scope
+
+Schema.org
+- En av de mest utbredte vokabularene for microdata
+- Orginalt etablert av Google og Yahoo
+    - Men i dag et åpent kildekode-samfunn
+        - så ha i bakodet at det kan misbrukes av folk som sender inn forslag til microdata-"tagger"
+- Har laget definisjoner på en lang rekke ting
+    - som artikler, arrangement, musikk, forfatter/person, osv.
+- obs! De bruker mye div og span. Ta en vurdering om det er nødvendig.
+Bruksområder
+- artikkel
+    - Godt bruksområde for microdata
+    - Google har egne søkeresultater for artikler
+    - Kan gi en enorm økning i CTR
+        - " click through rate"
+
+
+
+Rich Results
+- Benytter seg av microdata
+- Forbedrede søkeresultater som viser ekstra informasjon
+- Mer visuell og detaljert visning enn vanlige resultater
+- Øker brukerens interesse og kllikkrate (CTR)
+- Eksempler i presentasjonen. s.17
+- Best practice
+    - Validert microdata betyr ikke at det er rich results
+        - Derfor viktig å validere og sjekke rikeresultater
+    - Sørg for korrekt markup for å unngå feil
+    - Oppdater jevnlig for å sikre at informasjonen er nøyaktig
+    - Test regelmessig med Google-verktøy for å bekrefte synlighet
+
+
+
+
+
+-->
