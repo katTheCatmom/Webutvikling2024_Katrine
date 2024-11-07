@@ -1,0 +1,178 @@
+html {
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box; /* Sette border-box på alt. Da har man full kontroll på absolutt alle elementene*/
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+#grid-container {
+    display: grid; /*Dette alene er ikke nok, må også definere størrelsen*/
+    grid-template-columns: 1fr 3fr 1fr;/*3 kolonner. Ikke gå mer enn 5, blir fort rotete. Ønsker ikke brukegrid area her, for det begrenser mulighetene mer*/
+    grid-template-rows: auto auto auto; /*repeat(3, auto) -> det samme som å skrive auto tre ggr. Auto - 3 rader som tilpasser seg basert på innholdet*/
+    row-gap: 2rem; /*Skape litt luft mellom radene*/
+}
+
+#global-header {
+    grid-column-start: 1;/*plasserer headeren i top på grid.*/
+    grid-column-end: 4; /* den skal starte på linje én, og strekke seg helt til linje 4*/
+    /*grid-column: 1 / 4;  -> også en måte å skrive de to øvre linjene på.*/
+    grid-row: 1 / 2;/*Husk alltid row også. For å unngå evt rot i fremtiden.*/
+}
+
+#banner {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #efefef;
+    justify-content: space-between;
+
+    img {
+        max-width: 70%;
+    }
+}
+
+main {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 1rem;
+            
+            a {
+                color: #474747;
+                /* Padding på linker er en bra ting! Gir brukeren større trykkflate å trykke på*/
+            }
+        }
+    }
+}
+
+#category-menu {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    ul {
+        list-style: none;
+    }  
+}
+
+footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+}
+
+#main-logo {
+    width: 100%;
+    max-width: 250px; /*Bilde kan ikke bli bredere enn dette. kan bli smalere tho*/
+    display: block;
+    margin: 0px auto; /* kombinert med display:block legger den i midten. Bruk auto og ikke masse px beregninger for å få den i midten. 0px oppe og nede, auto på sidene*/
+}
+
+.flex-menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem; /* egenskap som kun følger flex og grid*/
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /*Når det ikke er plass til alt på linja, bryt. legg deg under*/
+
+    a{      /* man kan nå neste i css! isteden for en egen som hete .flex-menu a {}*/
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.flex-space-b {
+    display: flex;
+    justify-content: space-between;/*flex spesific. kontrollere tilgjengelig luft som er i tillegg til elementene inni flex*/
+    flex-wrap: wrap;
+    gap: 1rem; /* for bedre gap mellom meny og søkefelt*/
+}
+
+#outlet {
+    color: #ff0000;
+}
+
+.flex-space-b form {
+    position: relative;
+}
+
+.flex-space-b form label {
+    visibility: hidden; /* Fjerner ordet "søk" visuelt. Er fortsatt tilgjengelig for leseverktøy*/
+    position: absolute;
+}
+
+.flex-space-b h2 {
+    width: 100%;
+}
+
+.product-card {
+    max-width: 350px;
+    min-width: 200px;
+    width: 100%;
+    box-shadow: 13px 9px 20px 0px #efefef;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+/*Media queries burde alltid liggi i bunn*/
+/*Desktop*/
+@media only screen and (min-width:800px) {
+    
+    .fa-burger {    /*Fjerner hambrugerikonet når det er desktop*/
+        display: none;
+    }
+    #menu {
+        display: flex !important; /* !important Ovskriver absolutt alt. Bruk med omhu!!*/
+    }
+}
+/*Mobil*/
+@media only screen and (max-width:800px) {
+
+    #menu {
+        display: none; /*Menyen skal ikke syntes før man trykker på hamburgeren*/
+    }
+
+    #grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto; /*Gjør ikke noe om det er for mange på én eller flere av sidene. Det bare vil ikke ligge noe der*/
+    }
+
+    header, main, aside, footer{
+        grid-column: 1 / 2;
+    }
+
+    header {
+        grid-row: 1 / 2;
+    }
+
+    main {
+        grid-row: 2 / 3;
+    }
+
+    aside {
+        display: none; /*Er ikke en nødvendig funksjon i mobil*/
+    }
+
+    footer {
+        grid-row: 3 / 4;
+    }
+}

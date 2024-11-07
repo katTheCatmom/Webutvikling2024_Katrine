@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nb">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="font/css/all.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+		<link rel="stylesheet" href="style.css">
+        <title>Søkemotoroptimalisering</title>
+	</head>
+	<body>
+		<script>
+		function mobilMenu(){
+			var x = document.getElementById("ham");
+
+			if(x.style.display === "block"){
+				x.style.display = "none";
+			}
+			
+			else {
+				x.style.display= "block";
+			}
+		}
+		</script>
+    <div id="grid-container">
+        <header id="page-header">
+            <h1>Søkemotoroptimalisering</h1>
+        </header>
+        <nav>
+            <h2>Logo</h2>
+            <i class="fas fa-hamburger" onclick="mobilMenu()"></i>
+            <ul id="ham" class="top-menu">
+                <li><a href="#">Hjem</a></li>
+                <li><a href="#">Pensum</a></li>
+                <li><a href="#">Emneoversikt</a></li>
+                <!-- Her starter dropdown -->
+                <li class="dropdown-point"> 
+                    <a>Oblig 1</a>
+                    <ul class="dropdown-main">
+                        <li><a href="#">HTML-skjema</a></li>
+                        <li><a href="#">Media typer</a></li>
+                        <li><a href="#">CSS Layout</a></li>
+                    </ul>
+                </li>
+                <!-- Her slutter dropdown -->
+    
+            </ul>
+        </nav>
+        <main id="main">
+            <article id="item-1">
+                <header>
+                    <h3>Overskrift 1</h3>
+                </header>
+                <img src="https://picsum.photos/400/400" alt="Et usynlig artikkelkort">
+                <p>
+                    If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+                </p>
+                <a href="#">Hvorfor dette artikkelkortet ikke vises</a>
+            </article>
+            <article id="item-2">
+                <header>
+                    <h3>Overskrift 2</h3>
+                </header>
+                <img src="https://picsum.photos/400/400" alt="Minken viser sine velduftende catnip-cookies">
+                <p>
+                    If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+                </p>
+                <a href="#">Oppskrift på Minkens catnip-cookies</a>
+            </article>
+            <article id="item-3">
+                <header>
+                    <h3>Overskrift 3</h3>
+                </header>
+                <img src="https://picsum.photos/400/400" alt="Overvåkningsbilde av Makrell på flukt">
+                <p>
+                    If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+                </p>
+                <a href="#">Den ville flukten til Makrell</a>
+            </article>
+            <article>
+                <header>
+                    <h3>Overskrift 1</h3>
+                </header>
+                <img src="https://picsum.photos/400/400" alt="Årets klorestokk: CatScratch9000">
+                <p>
+                    If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+                </p>
+                <a href="#">Hvordan få en klorestokk billig - Martas 5 beste tips</a>
+            </article>
+            <article>
+                <header>
+                    <h3>Overskrift 2</h3>
+                </header>
+                <img src="https://picsum.photos/400/400" alt="Mao ved sofaen med et angerfullt ansikt">
+                <p>
+                    If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+                </p>
+                <a href="#">Slik sluttet Mao å tisse i sofaen</a>
+            </article>
+        </main>
+        <aside id="aside">
+            <h3>Side innhold</h3>
+            <section id="video">
+            </section>
+            <section id="rel-article">
+                <ul>
+                    <li><a href="#">Top 10 klorestokker 2024</a></li>
+                    <li><a href="#">Pelsprodukter for vinteren</a></li>
+                    <li><a href="#">Verdensherredømme 101</a></li>
+                    <li><a href="#">Greebles</a></li>
+                    <li><a href="#">Årets Chonk</a></li>
+                </ul>
+            </section>			
+            <section id="google-btn">
+                <a class="btn" href="#">Google</a>
+            </section>
+        </aside>
+        <footer>
+            Webutvikling 2024
+        </footer>
+    </div>
+	</body>
+</html>
