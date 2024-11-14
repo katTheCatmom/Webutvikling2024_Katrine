@@ -1,0 +1,155 @@
+<!--
+            Databaser med Ida
+
+Hva er en database?
+- Definisjon:
+    - En database er en organisert samking av data, 
+      som kan vøre alt fra brukeropplysninger i en
+      nettbutikk til bilder i en sosial medieapp
+    - Et lagringsmedium
+
+- forklaring:
+    - Programvare som gjøre det mulig å opprette,
+      administrere og manipulere databaser på en 
+      effektiv måte
+
+Hva er en server?
+- "Mellommann" mellom bruker/nettsted og database
+- En server er en datamaskin eller et program som
+  leverer tjenester, ressurser eller informasjon til
+  andre datamaskiner(klienter) over et nettverk
+- forskjellige typer servere:
+    - Webserver
+    - Applikasjonsserver
+    - Filserver
+
+Server vs Database
+- Server:
+    - Leverer data og tjenester til klienter
+    - Utfører logikk og styrer tilgang
+    - prosesserer forespørsler og sender respons
+    - Eks:
+        - Apache
+        - Nginx
+        - Node.js
+- Database
+    - Lagrer og organiserer data
+    - Tilbyr strukturert datalagring
+    - Håndterer fataforsespørsler og lagring
+    - Eks:
+        - MySWL
+        - MongoDB
+
+Sammenhengen mellom de:
+- Hvordan de samhandler
+    - Webserer mottar en forespørsel fra en bruker
+    - Webserveren sender forspørselen til applikasjonsserveren
+    - Applikasjonsserveren henter nødvendig data fra databasen
+    - Data sendes tilbake via webserveren og vises til brukeren i nettleseren
+- Hvorfor de er avhengige av hverandre:
+    - Servere muliggjør interaksjon med databasen på en sikker og effektiv måte
+    - Databaser lagrer data som kreves for dynamisk innhold på nettsider og apper
+
+Hvorfor er databasesystemer viktig i webutvikling?
+- Datahåndtering
+    - Kanskje et av de viktigste punktene med å bruke et databasesystem
+    - Lagre, hente ut, håndtere, manipulere data.
+- Dynamisk innhold
+    - Feks. endring av produkt ved hjelp av databser, istedenfor å hardkode
+    - Tenk filtrering av farge, merke, størrelse
+        - Kan hentes ut fra databasen, så skjer oppdateringer og endringer automatisk
+    - krever at databasen er godt strukutrert på en fornuftig måte
+- Skalerbarhet
+    - Man ønsker jo uendelig med lagringsplass
+    - For å ikke ha et maks tak på typ 10 brukere
+    - Kan føre til at siden kræsjer
+        - Elkjøpt og black friday
+    - dårlig skalerbarhet -> miste kunder
+- Sikkerhet
+    - Håndtere persondata
+    - Hvordan lagre brukerdata på en sikker måte
+    - Tilganger. Hvem skal ha tilgang til hva?
+        - lagre, slette, hente, endre data
+    
+
+Relasjonsdatabaser (SQL)
+
+- Definisjon:
+    - Data lagres i tabeller med rader og kolonner.
+      Strukturerte edataa som kan relateres til hverandre
+- Fordeler:
+    - Gode på komplekse spørringer og dataintegritet
+    - Lett å finne frem, lett å finne informasjonen
+- Ulemper:
+    - Kan være mindre fleksible ved håndtering av ustrukturert data
+    - krever at alt kan plasseres i en tabell for å lagre data. 
+
+NoSQL-databaser
+- eks:
+    - Google maps
+        - Trafikk, ulykker etc som den baserers seg på når rute lagres
+        - Mye informasjon som er vanskelig å sortere og strukturere
+- definisjon:
+    - Databaser som ikke nødvendigvis bruker tabellbasert lagring.
+      Bedre egnet for ustrukturert data og raskere skalering
+- Fordeler:
+    - Fleksible datastrukturer, lett å skalere horisontalt
+    - tenk eks. facebook og alle funkjsonalitene der.
+        - Kommentarfelt, venneliste etc 
+    - For dat asom hele tiden er i endring
+    - Sanntidsdata som hele tiden er i endring
+- Ulemper:
+    - Mangler de komplekse spørringsmulighetene til relasjonsdatabaser
+
+Når bruke hva?
+- Relasjonsdatabaser:
+    - Gode for komplekse applikasjoner som krever mange forhold
+      mellom ulike typer data
+- NoSQL:
+    - Ofte brukt når applikasjoner må håndtere store mengder
+      ustruktert data eller skalere raskt.
+
+- Kan brukes i kombinasjon, som er vanlig i dag. 
+    
+Populære databasesystemer i webutvikling:
+- MySQL
+    - Vanlig i tradisjoenelle webapplikasjon som Wordpress og andre LAMP-stack-applikasjoner
+- PostgreSQL:
+    - Et kraftig SQL-system kjent for sin fleksibilitet og utvidbarhet
+- MongoDB
+    - en NoSQL-løsning som er populær for moderne applikasjoner som håndterer ustruktert data
+- Firebase:
+    - En skytjeneste med realtidsdatabase, populær i mobil- og webutvikling for enkel dataintegrasjon
+-->
+
+<!--
+                Case study - Eksamen som eksempel
+
+(Viste mest egt i MySQL)
+Produktkort (Selve elementet på produktsiden (kjole + info)):
+- Absolutt alt er data. 
+- 
+Relasjonsbasert:
+- Produktnavn
+- Merke
+- Pris
+- Farge
+- Størrelser
+- Handlekurv
+- Favoritter
+- Materiale og Vedlikehold
+- Produktdetaljer
+- Størrelsestabell
+- Bilder
+
+
+- NoSQL:
+    - anmeldelser
+- Relasjonsbasert database:
+    - "Legg til i handlekurv"
+    - Personopplysninger
+    - Kortinformasjon
+    - Levering
+    - Samtykker
+
+-->
