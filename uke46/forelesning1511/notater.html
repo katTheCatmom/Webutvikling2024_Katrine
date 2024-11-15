@@ -1,0 +1,242 @@
+<!--
+            Servere, Skyløsninger og bærekraft i webutvikling
+
+Servere - hva og hvordan
+- En server er en enhet som leverer spesifikke tjenester
+  til klienter (brukerenheter) over et nettverk
+- Når en klient (eks. mobil) ber om en tjeneste (si en nettside),
+  vil serveren motta og behandle den forespørselen
+- Servere bruker spesifikke protokoller, HTTP/HTTPS for nettsider
+  og FTP(/SFTP) for filoverføring, for å kommunisere med klientene
+    - FileZilla er en FTP/SFTP protokoll
+- ulike protokoller for hva du ønsker å gjøre
+- HTTPS
+    - S 
+        - Eget sertifikat
+        - Sørger for at personinformasjon blir kryptert
+            - feks. kortinformasjon etc
+        - uten denne, kommer feks. kortinformasjonen som rentekst
+    - Google er veldig glad i HTTPS
+
+IP-adresse og DNS
+- En IP-adresse er adressa til det serverområde nettstedet ditt ligger
+    - Alt er en IP-adresse
+        - også mobil, laptop, desktop
+- Kan ha flere nettsteder på samme ip-adresse
+    - tenk feks BRA-veien
+        - braveien 4 er en nettside
+        - braveien 5 er en annen
+- Når noen skriver inn en URL til et nettsted, sendes det en
+  forespørsel til serveren om å få tilgang til innhold som
+  ligger på den aktuelle IP-adressa
+- Ved bruk av DNS (Domain name system) kan vi forholde oss til å
+  skrive domenenavn når vi sender forespørsler
+    - Dette systemet oversetter IP-adresser til domenenavn.
+- Statisk IP-adresse
+    - samme IP-adresse
+    - Hvis man har én server som durer og går
+    - DNS
+- Dynamiske IP-adresser
+    - Forskjellige IP-adresser
+    - Kan dlytte seg fra område til område
+    - feks skyløsning
+    - eller flere serverområder
+    - domenenavnet vil være det samme, kun IP-adressa som endrer seg
+
+
+Skyløsninger og tjenester
+- En skyløsning er tjeneste eller løsning  som lar brukere
+  lagre, behnadle og få tilgang til data og ulike applikasjoner på nett.
+- Github, Netflfik, Google Disk
+- En tjeneste som gir deg akkurat det du har på maskinen.
+    - Det foregår på maskinen din, men det ligger ikke der
+    - Har tilgang til alt som kan brukes, uten at det ligger på maskinen
+- Skuløsninger lurt for maskinlæring, da det krever mye "juice" fra maskinen uten
+- Skyen er en faktisk maskin, et eller annet sted
+    - Viktig å vite hvor de faktisk er hen.
+- Ressurser driftes og vedlikeholdes av en tredjepartsleverandør
+    - Viktig at vi vet hvor den er mtp GDPR
+- Typiske bruksområder
+    - Lagring og backup
+    - Utvikling og testing
+    - Analyse
+- Fordeler med skyløsninger:
+    - skalerbart
+        - Bruker ikke mer enn du trenger, kontinuerlig
+    - kostnadseffektivt
+        - Betaler kun for det du bruker
+    - Bærekraft
+        - Istedenfor å kjøpe 50gb som reiser frem og tilbake hele tiden
+        - Sender frem og tilbake det du har brukt, og bruker derfor den mengden strøm som trengs
+    - Tilgjengelighet og fleksibelt
+        - Du kan kobles til hvor som helst i verden, uavhengig av device
+    - sikkerhet
+        - Skyløsninger tilbyr avanserte sikkerhetssytemer, som kunne vært umulig å fikse selv
+        - De tar også backup ofte
+        - Katestrofegjennoppretting
+- Ulempet/utfordringer:
+    - Personvern og sikkerhet
+        - Viktig å vite hvor daten ligger hen
+        - Blir skytjenesten hacket, så ja..
+    - Internett avhengighet
+        - Også for å redigere nettstedet. Kan ikke gjøres offline.
+    - Kostnadsstyring
+        - Kan være vanskelig å ha en oversikt
+    - Regulering og lovverk
+        - Kan differere fra område til område (tenk GDPR)
+- Fremtidige løsninger:
+    - Multi-cloud
+        - Spre nettstedet utover flere servere
+    - Edge computing
+        - Dataen vi spør om blir behandlet nærmere klienten. 
+        - Ting prossesseres raskere
+        - Øker påliteligheten på nettstedet
+            - Ting trenger ikke laste så veldig lenge
+        - krever litt mer kompetanse
+        - øker sanntidsresponsen
+    - Miljøvennlige skyer
+        - Serverfarmene kjører på 100% fornybar energi
+        - ved hjelp av feks solcellepaneler
+
+Domene
+- ET domene er det navnet som vi har på et nettsted som gjør det brukervennlig
+  å sende forespørsler til innhold på nett.
+- Gjør alt brukervennlig, fordi man ikke trenger å huske IP-adresse
+- Et domene består av
+    - navn
+    - et TLD
+        - .com
+        - .org
+        - .net
+        - .no
+- Domener har regler:
+    - .org
+        - organisasjoner
+    - .edu
+        - utdanning
+    - .gov
+        - regjering
+    - .no
+        - Krever at registranten er bosatt i Norge
+            - Eller har et registrert firma i Norge
+    - .fr
+        - Krever at registranten er bosatt i EU eller har adresse i EU
+    - .us
+        - Krever amerikansk statsborgerskap, eller registrert som virksomhet i USA
+- Domene er del av full URL
+    - URL består av:
+        - protokoll
+        - domene
+        - eveentuelle filbaner eller side
+    - eks:
+        - se ppt s. 4
+SLD
+- second level domain
+- Hoveddelen, selve navnet
+    - vg
+    - hiof-
+    - zalando
+TLD
+- Top level domain
+- Gjelder endelsen
+    - .no
+    - .org
+    - etc
+SUB
+- subdomain
+- Er valgfritt
+- Brukes gjerne til underliigende deler av nettstedet som du vil skal tilhøre samme domene
+- eks
+    - hiof.shop.idegroup.no
+
+full url
+- protokoll (HTTP/HTTPS)
+- www (kalles?)
+- domenenavn
+- top level domain
+
+
+
+                                                        Bærekraft i webutvikling
+
+Reduksjon av karbonavtrykk
+- optimaliserte sider
+- energieffektive datasentre
+    - fornybar energi
+- Redusert HTTP/HTTPS forespørsler
+
+Design for lavere ressursbruk
+- minimalistisk design
+    - det enkele er ofte det beste
+- responsivt design
+- Lettvekt rammeverk/minimal kodebase
+
+
+Effektiv koding og ressursoptimalisering
+- semantiske tagger
+- unngå overdreven div-bruk
+- ressursoptimalisering
+    - minifiser css, bilde format etc
+- Mellomlagring
+    - localStorage
+    - sessionStorage
+
+Bærekraftige skytjenester
+- Grønn sky
+    - Innen 2025 skal microsoft flytte/benytte 100% fornybar energi
+    - i 2023 var Amazon Web 100% grønn
+    - Google jobber også mot 100% grønn drift
+- Edge computing
+    - Du har flytta ressursene nærmere brukeren, forespørslene blir bearbeidet nærmere enn serveren. 
+
+Sosial bærekraft og tilgjenglighet
+- Universell utforming
+- Digital inkludering
+    - Inkluderer brukere som ikke vanlig har tilgang til digitale tjenester
+    - Hvordan får jeg en bruker til å i det hele tatt benytte seg av tjenesten/produkktet?
+        - Har ikke mobil
+        - har ikke pc
+    - Hvordan inkluderer man folk som ikke har tilgang på dette
+    - GJøre nettsider tilgjenglig for folk med begrenset netttilgang
+    - Inkludere de som ikke har råd til det nye og beste 
+    - Dersom man ikke har 5g
+
+Analyser og fokus på bærekraft
+- Web-analyser
+    - google analytics
+        - kan se ressursbruk
+        - høy bouncerate -> kanskje ikke godt nok optimalisert. 
+    - ytelse
+    - dataforbruk til brukeren på nettsiden din
+- Karbonanalyseverktøy
+    - AC har ikke vært borti de selv
+    - Altså, hvor mye strøm blir brukt, og hvordan man kan optimalisere det. 
+
+Langsiktige løsninger
+- AI
+    - kan brukes til å identifisere områder som kan optimaliseres
+    - analyserer siden din
+    - "Denne nettsiden bruker litt for mye strøm fordi det og det"
+- Bærekraftig innholdsstrategi
+    - Reddusere det med unødvendig innhold
+    - er kontakt-siden nødvendig, eller holder det med footer?
+        - spesielt dersom akkurat det samme står i footer
+    - har jeg flere av samme bilde
+        - er det redundante bilder
+    - Hvor store trenger videoen å være?
+        -  er den redundant? Er dedn viktig for siden
+    - Dynamisk innhold
+        - Henter informasjon kun når nødvendig
+        - Hva kan være statisk?
+            - eks footer.
+                - skal ikke endres, er fast
+                - slipper å hente footer fra databasen hver gang.
+- Grønn web hosting
+    - Amazon
+    - Microsoft
+    - Google
+
+
+
+
+-->
